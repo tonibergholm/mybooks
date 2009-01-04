@@ -1,0 +1,32 @@
+<h1>Listing books</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Year</th>
+    <th>Purchase date</th>
+    <th>Lang</th>
+    <th>Publisher</th>
+    <th>Status</th>
+  </tr>
+
+<% for book in @books %>
+  <tr>
+    <td><%=h book.name %></td>
+    <td><%=h book.author %></td>
+    <td><%=h book.year %></td>
+    <td><%=h book.purchase_date %></td>
+    <td><%=h book.lang %></td>
+    <td><%=h book.publisher %></td>
+    <td><%=h book.status %></td>
+    <td><%= link_to 'Show', book %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New book', new_book_path %>
