@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title>MyBooks - <%= controller.controller_name %>: <%= controller.action_name %></title>
+	<title>MyBooks - <%= controller.controller_name %>: <%= params[:path] %> not found</title>
 	<%= stylesheet_link_tag 'visual' %>
 	<%= javascript_include_tag :defaults %>
 	<meta name="keywords" content="book, books, database, list, read, reading" />
@@ -18,15 +18,9 @@
 	<hr />
 	<!-- end header -->
 <!-- start page -->
-<div id="wrapper">
-	<div id="page">
-		<!-- start content -->
-		<div id="content">
-			<%= yield  %>
-		</div>
-		<!-- end content -->
+	<div id="error_page">
+		<%= yield  %>
 	</div>
-</div>
 <!-- end page -->
 <!-- start footer -->
 <div id="footer">
