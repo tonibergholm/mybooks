@@ -1,8 +1,11 @@
 class BooksController < ApplicationController
+  before_filter :require_user
+  sidebar :login, :unless => :login_ok?  
+  sidebar :account, :if => :login_ok?  
   # GET /books
   # GET /books.xml
   def index
-    @books = Book.find(:all)
+    @books = Book.find_all_by_user_id(@current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +44,7 @@ class BooksController < ApplicationController
   # POST /books.xml
   def create
     @book = Book.new(params[:book])
+    @book.user_id = @current_user.id
 
     respond_to do |format|
       if @book.save
