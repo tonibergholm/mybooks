@@ -3,12 +3,12 @@ body {
 	padding: 0px;
 	background: #0D0D0D url(/images/img01.jpg) repeat-x;
 	text-align: justify;
-	font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font: 13px "Helvetica", Arial, Helvetica, sans-serif;
 	color: #FFFFDC;
 }
 
 h1, h2, h3 {
-	font: 1.82em, Arial, Helvetica, sans-serif;
+	font: 1.82em "Helvetica", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	letter-spacing: -1px;
 	color: #FFFFFF;
