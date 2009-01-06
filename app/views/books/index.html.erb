@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Original name</th>
     <th>Author</th>
     <th>Year</th>
     <th>Pages</th>
@@ -14,6 +15,7 @@
 <% for book in @books %>
   <tr>
     <td><%=h book.name %></td>
+    <td><%=h book.original_name %></td>
     <td><%=h book.author %></td>
     <td><%=h book.year %></td>
     <td><%=h book.pages %></td>
