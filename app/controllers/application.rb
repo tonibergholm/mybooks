@@ -2,7 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  after_filter ::RailsDebugBar
+#  after_filter ::RailsDebugBar
   helper :all # include all helpers, all the time
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user, :logged_in?, :login_ok?
